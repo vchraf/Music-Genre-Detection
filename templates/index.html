@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+
+
+{% block body %}
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+<center>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h1 class="display-4 p-2" >Get Musical Genre</h1>
+    </div>
+  </div>
+</center>
+
+<div class="row">
+  <div class="mb-2 col-md-6 offset-md-3">
+    <form action="/" method="POST" enctype="multipart/form-data" style="width: 20em; display: block;margin:auto;">
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" name="file" accept=".mp3, .wav"  class="custom-file-input" id="inputGroupFile" style="width:19em;" aria-describedby="inputGroupFileAddon04">
+          <label class="custom-file-label" for="inputGroupFile" style="width:19em;">Choose file</label>
+        </div>
+      </div>
+      <br><input type="submit" value="GET GENRE" class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" style="display: block;margin:auto;" />
+    </form>
+  </div>
+</div>
+<style>
+  a:link {
+  color: rgb(0, 3, 32);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(0, 3, 32);
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+<center>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+          <h3 class="display-4 p-2" >{{ g }}</h3>
+          <u><strong><a href="./details">{{ etat }}</a></strong></u>
+      </div>
+    </div>
+  </center>
+{% endblock %}
+
+
+
